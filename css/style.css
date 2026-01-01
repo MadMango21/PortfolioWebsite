@@ -427,3 +427,8 @@ input[type=range]:focus::-webkit-slider-thumb {
     top: 0px;
     left: 0px;
 }
+
+.counter-plus::after {
+    content: "+";
+    margin-left: 2px;
+}
