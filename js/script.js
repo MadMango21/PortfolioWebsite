@@ -35,7 +35,7 @@ $(document).ready(function () {
     owl.owlCarousel({
         loop: true,
         mouseDrag: true,
-        autoplay: false,
+        autoplay: true,
         responsive: {
             0: {
                 items: 1,
@@ -60,14 +60,9 @@ $(document).ready(function () {
     });
     //   function getIndex(event) {
 
-    //   }
-    owl.on('changed.owl.carousel', function (event) {
-        console.log(event.item.index);
-        inputType.val(event.item.index);
+  
 
-    });
-
-    $(".go-me").click(function () {
+   /* $(".go-me").click(function () {
         owl.trigger("next.owl.carousel");
     });
     $(".back-me").on("click", function () {
@@ -81,12 +76,10 @@ $(document).ready(function () {
 
         $('.owl-carousel').trigger('to.owl.carousel', [inputType.val(), 1, true]);
 
-    });
+    });*/
 });
 
-$(function () {
-    $('[data-toggle="tooltip"]').tooltip()
-})
+
 
 
 
@@ -108,7 +101,7 @@ $(function () {
             lineWidth: 4,
             size: 152,
             animate:{
-              duration: 3000,
+              duration: 5000,
               enabled: true
             },
             onStep: function(from, to, percent){
