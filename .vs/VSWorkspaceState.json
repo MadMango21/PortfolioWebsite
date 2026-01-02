@@ -5,8 +5,11 @@
     "\\img",
     "\\img\\Banners",
     "\\img\\Icons",
+    "\\img\\Portfolio",
+    "\\img\\Portfolio\\Thumbnails",
+    "\\img\\Portfolio\\Warhammer",
     "\\js"
   ],
-  "SelectedNode": "\\img",
+  "SelectedNode": "\\img\\Portfolio\\Thumbnails",
   "PreviewInSolutionExplorer": false
 }

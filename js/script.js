@@ -176,3 +176,8 @@ $("#filters a").click(function() {
     }
 
 });
+$('[data-fancybox="warhammer-gallery"]').fancybox({
+    thumbs: {
+        autoStart: true
+    }
+});

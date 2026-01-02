@@ -73,7 +73,7 @@ font-size: 25px;
 	font-size: 30px;
 }
 h5 {
-	font-size: 50px;
+	font-size: 40px;
 }
 
 .aboutImage {
@@ -325,10 +325,13 @@ width: 100%;
 .items {
 	padding: 0;
 }
+.fancybox-hidden {
+    display: none;
+}
 
 .copyrightSection {
-	background-color: #27ae60;
-	color: #fff;
+	background-color: #fff;
+	color: #27ae60;
 	padding: 30px 5px;
 }
 
