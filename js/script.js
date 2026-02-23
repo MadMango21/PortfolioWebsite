@@ -17,7 +17,7 @@ $(document).ready(function () {
 $('#slides').superslides({
 
 animation:'fade',
-play: 5000
+play: 30000
 });
 
 var typed = new Typed(".typed", {
