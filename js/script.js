@@ -24,7 +24,7 @@ var typed = new Typed(".typed", {
 strings: ["Game Designer.", "Director.","Photographer.", "Human."],
 typeSpeed: 70,
 loop: true,
-startDelay: 1000,
+    startDelay: 2000,
 showCursor: false
 
 });
