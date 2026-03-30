@@ -13,164 +13,69 @@ $(window).on("load", function() {
         }
     });
 });
+
 $(document).ready(function () {
-$('#slides').superslides({
 
-animation:'fade',
-play: 30000
-});
+    $('#slides').superslides({
+        animation: 'fade',
+        play: 8000
+    });
 
-var typed = new Typed(".typed", {
-strings: ["Game Designer.", "Director.","Photographer.", "Human."],
-typeSpeed: 70,
-loop: true,
-    startDelay: 2000,
-showCursor: false
-
-});
-$(document).ready(function () {
-    var owl = $(".owl-carousel"),
-        // rangeArr = [],
-        inputType = $("input[type=range]");
-    owl.owlCarousel({
+    var typed = new Typed(".typed", {
+        strings: ["Game Designer.", "Director.", "Photographer.", "Human."],
+        typeSpeed: 70,
         loop: true,
-        mouseDrag: true,
-        autoplay: true,
-        responsive: {
-            0: {
-                items: 1,
-                slideBy: 1
+        startDelay: 2000,
+        showCursor: false
+    });
 
-            },
-            480: {
-                items: 2,
-                slideBy: 1
+    var statsTopOffset = $(".statsSection").offset().top;
+    var countUpFinished = false;
 
-            },
-            768: {
-                items: 3,
-                slideBy: 1
-            },
-            938: {
-                items: 4,
-                slideBy: 1
-            }
+    $(window).scroll(function() {
+        if (!countUpFinished && window.pageYOffset > statsTopOffset - $(window).height() + 200) {
+            $(".counter").each(function() {
+                var element = $(this);
+                var endVal = parseInt(element.text());
+                element.countup(endVal);
+            });
+            countUpFinished = true;
         }
-
     });
-    //   function getIndex(event) {
 
-  
+    $("[data-fancybox]").fancybox();
 
-   /* $(".go-me").click(function () {
-        owl.trigger("next.owl.carousel");
-    });
-    $(".back-me").on("click", function () {
-        owl.trigger("prev.owl.carousel");
-    });
-    $("input").on("change", function (e) {
-        e.preventDefault();
-        console.log(inputType.val());
-        // console.log(e.item.index);
-        // FIGURE OUT HOW TO GET CAROUSEL INDEX
+    $("#filters a").click(function() {
+        $("#filters .current").removeClass("current");
+        $(this).addClass("current");
 
-        $('.owl-carousel').trigger('to.owl.carousel', [inputType.val(), 1, true]);
+        var selector = $(this).attr("data-filter");
 
-    });*/
-});
-
-
-
-
-
-
-//2003.21875
-  var skillsTopOffset = $(".skillsSection").offset().top;
-  var statsTopOffset = $(".statsSection").offset().top;
-  var countUpFinished = false;
-
-  $(window).scroll(function(){
-
-    if(window.pageYOffset > skillsTopOffset - $(window).height()+200){
-
-      $('.chart').easyPieChart({
-            easing: 'easeInOut',
-            barColor: '#fff',
-            trackColor: false,
-            scaleColor: false,
-            lineWidth: 4,
-            size: 152,
-            animate:{
-              duration: 5000,
-              enabled: true
-            },
-            onStep: function(from, to, percent){
-              $(this.el).find('.percent').text(Math.round(percent));
+        $(".items").isotope({
+            filter: selector,
+            animationOptions: {
+                duration: 1500,
+                easing: 'linear',
+                queue: false
             }
         });
 
-    }
-
-    if(!countUpFinished && window.pageYOffset > statsTopOffset - $(window).height()+200){
-      $(".counter").each(function(){
-          var element = $(this);
-          var endVal = parseInt(element.text());
-
-          element.countup(endVal);
-        })
-        countUpFinished = true;
-    }
-
-
-  });
-
-
-$("[data-fancybox]").fancybox();
-
-
-$("#filters a").click(function() {
-
-  $("#filters .current").removeClass("current");
-  $(this).addClass("current");
-
-  var selector = $(this).attr("data-filter");
-
-  $(".items").isotope({
-      filter: selector,
-      animationOptions: {
-          duration: 1500,
-          easing: 'linear',
-          queue: false
-      }
-
-  });
-
-  return false;
-});
-
+        return false;
+    });
 
     const nav = $("#navigation");
-    const navTop = nav.offset().top;
 
     $(window).on("scroll", stickyNavigation);
 
     function stickyNavigation() {
-
         var body = $("body");
-
         if ($(window).scrollTop() >= $(".overlay").height()) {
             body.css("padding-top", nav.outerHeight() + "px");
             body.addClass("fixedNav");
-        }
-        else {
+        } else {
             body.css("padding-top", 0);
             body.removeClass("fixedNav");
         }
     }
 
-});
-$('[data-fancybox="warhammer-gallery"]').fancybox({
-    thumbs: {
-        autoStart: true
-    }
 });
