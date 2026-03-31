@@ -758,8 +758,18 @@ body.product-page #navigation {
   flex-wrap: wrap;
 }
 
-.hero-cta {
-  margin-top: 24px;
+.overview-cta {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 50px;
+}
+
+.overview-cta .cta-btn {
+  grid-column: 2;
+  width: fit-content;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .product-tag {
@@ -1020,6 +1030,14 @@ body.product-page #navigation {
 
   .product-info-grid {
     grid-template-columns: 1fr;
+  }
+
+  .overview-cta {
+    grid-template-columns: 1fr;
+  }
+
+  .overview-cta .cta-btn {
+    grid-column: 1;
   }
 
   .product-details-card {
