@@ -165,7 +165,7 @@ h5 {
    ABOUT SECTION
    =========================== */
 #about {
-  background-color: var(--bg-section);
+  background-color: var(--bg-dark);
   color: var(--text-primary);
 }
 
@@ -335,14 +335,71 @@ h5 {
    RESUME SECTION
    =========================== */
 #resume.contactSection {
-  background: linear-gradient(135deg, var(--bg-section), #2d1a35);
+  background-color: var(--bg-section);
+}
+
+/* ===========================
+   RESUME CARDS
+   =========================== */
+.resume-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 18px;
+  padding: 30px;
+  margin-bottom: 20px;
+  height: calc(100% - 20px);
+}
+
+.resume-card-label {
+  display: block;
+  font-size: 11px;
+  color: var(--accent-orange);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.resume-card h3 {
+  color: var(--text-primary);
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+
+.resume-card p {
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 6px;
+  letter-spacing: 0.5px;
+}
+
+.resume-list {
+  list-style: none;
+  padding: 0;
+  margin: 14px 0 0 0;
+}
+
+.resume-list li {
+  color: var(--text-secondary);
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  padding: 8px 0;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.resume-list li::before {
+  content: "→";
+  color: var(--accent-orange);
+  margin-right: 10px;
+  font-size: 12px;
 }
 
 /* ===========================
    SKILLS SECTION
    =========================== */
 .skillsSection {
-  background-color: var(--bg-section);
+  background: linear-gradient(135deg, var(--bg-section), #2d1a35);
   color: var(--text-primary);
 }
 
@@ -500,6 +557,48 @@ h5 {
   text-decoration: none;
   background-color: var(--accent-orange);
   color: #fff;
+}
+
+/* ===========================
+   SOCIAL LINKS
+   =========================== */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1px solid rgba(232, 132, 74, 0.35);
+  color: var(--text-secondary);
+  font-size: 18px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.social-link:hover {
+  border-color: var(--accent-orange);
+  color: var(--accent-orange);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(232, 132, 74, 0.2);
+  text-decoration: none;
+}
+
+.social-links-footer {
+  margin-top: 14px;
+}
+
+.social-links-footer .social-link {
+  width: 36px;
+  height: 36px;
+  font-size: 14px;
 }
 
 /* ===========================

@@ -22,7 +22,7 @@ $(document).ready(function () {
     });
 
     var typed = new Typed(".typed", {
-        strings: ["Game Designer.", "Director.", "Photographer.", "Human."],
+        strings: [ "Game Designer.", "Combat Designer.", "Systems Designer.", "AI Designer.", "Director.", "Photographer.", "Human."],
         typeSpeed: 70,
         loop: true,
         startDelay: 2000,
