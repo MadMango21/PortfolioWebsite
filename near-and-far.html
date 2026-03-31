@@ -36,10 +36,10 @@
 			<a href="index.html#portfolio" class="back-btn"><i class="fas fa-arrow-left"></i> Portfolio</a>
 			<h1 class="product-title">Near and Far</h1>
 			<div class="product-tags">
-				<span class="product-tag">Puzzle Adventure</span>
+				<span class="product-tag">Puzzle</span>
+				<span class="product-tag">Adventure</span>
 				<span class="product-tag">Unreal Engine 5</span>
 				<span class="product-tag">Team Project</span>
-				<span class="product-tag">1st Year Final</span>
 			</div>
 		</div>
 	</div>
@@ -48,32 +48,38 @@
 		<div class="container">
 			<div class="product-info-grid">
 				<div class="product-description">
-					<p>Near and Far was the final project of my first year at university, made in a team of three. The brief was to adapt a board game into a video game &mdash; we chose Near and Far for its richly creative possibilities and the opportunity to design multiple distinct mechanics.</p>
+					<p>Near and Far was the final project of my first year at university, made in a team of three. The brief was to adapt a board game into a video game. We chose Near and Far for its richly creative possibilities and the opportunity to design multiple distinct mechanics.</p>
 					<p>The game features a hub area inspired by Crash Bandicoot 2, from which the player chooses the order they tackle three main levels. Each level introduces a unique core mechanic that changes how the player interacts with the puzzle sandbox:</p>
 					<p>In the <strong>Boulder Level</strong>, the player guides a boulder down into a hole to open a door, using pressure plates and a torch to solve the puzzle. In the <strong>Gravity Level</strong>, inspired by the Gravity Rush games, the player can start floating and redirect gravity by pressing a button, using this to navigate complex environments. In the <strong>Time Travel Level</strong>, I translated and expanded the Blink mechanic from Unity into Unreal, creating a third person platformer where a single button press changes the entire environment between two time periods.</p>
 				</div>
 				<div class="product-details-card">
 					<h4>Project Details</h4>
-					<div class="detail-item">
-						<span class="detail-label">Engine</span>
-						<span class="detail-value">Unreal Engine 5</span>
-					</div>
+
 					<div class="detail-item">
 						<span class="detail-label">Type</span>
 						<span class="detail-value">Puzzle Adventure</span>
 					</div>
-					<div class="detail-item">
-						<span class="detail-label">Team</span>
-						<span class="detail-value">3 People</span>
-					</div>
+
 					<div class="detail-item">
 						<span class="detail-label">Based On</span>
 						<span class="detail-value">Near and Far (Board Game)</span>
 					</div>
+
 					<div class="detail-item">
-						<span class="detail-label">Year</span>
-						<span class="detail-value">1st Year Final Project</span>
+						<span class="detail-label">Engine</span>
+						<span class="detail-value">Unreal Engine 5</span>
 					</div>
+					
+					<div class="detail-item">
+						<span class="detail-label">Team</span>
+						<span class="detail-value">Game Designer</span>
+						<span class="detail-value">Humza Mustafa,</span>
+						<span class="detail-value">Kanye Wallace</span>
+						<span class="detail-value">---------------------</span>
+						<span class="detail-value">Technical Artist</span>
+						<span class="detail-value">Isbah Anzaq</span>
+					</div>
+					
 				</div>
 			</div>
 		</div>
@@ -107,10 +113,28 @@
 		<div class="container">
 			<p class="section-label">Behind the Scenes</p>
 			<h2 class="section-title">Design Process</h2>
-			<div class="process-placeholder">
-				<i class="fas fa-pencil-alt"></i>
-				<p>Detailed design notes coming soon &mdash; check back later!</p>
-			</div>
+			<ul class="process-list">
+				<li class="process-item">
+					<h3 class="process-item-title">Why Near and Far?</h3>
+					<p>The Near and Far board game is built around exploration, journeying through cities and ancient ruins, uncovering what is there. That core focus gave us creative freedom that a more rule-heavy board game would not have. Rather than trying to faithfully simulate a rigid ruleset, we had a theme and a spirit to work from, which let us design the adventuring and puzzles in a way that felt natural to video games rather than like a direct port.</p>
+				</li>
+				<li class="process-item">
+					<h3 class="process-item-title">The Non-Linear Hub</h3>
+					<p>A non-linear hub area lets players explore at their own pace, and that is exactly what adventuring should feel like. Scripting a fixed level order would have undermined the sense of discovering uncharted ruins on your own terms. Inspired by Crash Bandicoot 2, the hub becomes a space in its own right, somewhere to move through, orient yourself, and choose your path, rather than just a menu dressed up as a room.</p>
+				</li>
+				<li class="process-item">
+					<h3 class="process-item-title">Three Mechanics, Three Ways of Thinking</h3>
+					<p>Each level was designed to challenge the player in a fundamentally different way. The Boulder level forces timing and spatial awareness, you have to understand where things are and when to act. The Gravity level asks the player to think outside the box entirely: instead of running toward an objective, you have to fly to walls and ceilings to find clues, rewiring your instincts about how a space works. The Time Travel level, rebuilt from Blink, deliberately stripped back the movement focus to make the player think more strategically. The question is not how to move, but when to switch.</p>
+				</li>
+				<li class="process-item">
+					<h3 class="process-item-title">Translating Gravity Rush Into a Puzzle</h3>
+					<p>The key to making the gravity mechanic work as a puzzle was forcing the player to engage with all six sides of the room, not just the floor. Pressure plates were placed on the front wall, back wall, side walls, ceiling, and floor, so the player had to consciously understand that every surface was navigable and that progress required visiting all of them. The puzzle teaches you to stop thinking of the floor as the only valid surface, which is the whole point of the mechanic.</p>
+				</li>
+				<li class="process-item">
+					<h3 class="process-item-title">Optimising the Time Travel Mechanic in Unreal</h3>
+					<p>Having already built the time travel mechanic in Unity for Blink, rebuilding it in Unreal Engine 5 gave me the chance to do it properly. The key optimisation was splitting the level into smaller sections so the engine could detect where the player was standing and only swap the assets in that immediate area, rather than toggling the entire environment at once. This made the system far less demanding and kept performance stable, a lesson I could only have learned by building it twice.</p>
+				</li>
+			</ul>
 		</div>
 	</div>
 
