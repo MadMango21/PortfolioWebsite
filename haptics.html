@@ -36,8 +36,9 @@
 			<a href="index.html#portfolio" class="back-btn"><i class="fas fa-arrow-left"></i> Portfolio</a>
 			<h1 class="product-title">DualSense Haptics</h1>
 			<div class="product-tags">
-				<span class="product-tag">PS5 Haptics</span>
-				<span class="product-tag">Unity</span>
+				<span class="product-tag">Haptic Feedback</span>
+				<span class="product-tag">Adaptive Triggers</span>
+				<span class="product-tag">Unreal Engine 5 </span>
 				<span class="product-tag">C++</span>
 				<span class="product-tag">Solo Project</span>
 			</div>
@@ -50,25 +51,23 @@
 				<div class="product-description">
 					<p>DualSense Haptics is a research and design project exploring the unique ways the PS5 DualSense controller's adaptive triggers and haptic feedback can be implemented across different game genres.</p>
 					<p>The project features three distinct test environments: a First Person Shooter shooting range where different guns produce unique trigger resistance and vibration patterns; a First Person Horror level with intense, anxiety-inducing haptic feedback; and a Third Person Melee Combat arena showcasing hit-feel and reaction feedback.</p>
-					<p>Built using Unity and C++, this project was released on itch.io and demonstrates my ability to work with platform-specific hardware APIs to create more immersive, tactile player experiences.</p>
+					<p>Built using Unreal Engine 5 and C++, this project was released on itch.io and demonstrates my ability to work with platform-specific hardware to create more immersive, tactile player experiences.</p>
 				</div>
 				<div class="product-details-card">
 					<h4>Project Details</h4>
-					<div class="detail-item">
-						<span class="detail-label">Engine</span>
-						<span class="detail-value">Unity + C++</span>
-					</div>
+					
 					<div class="detail-item">
 						<span class="detail-label">Type</span>
-						<span class="detail-value">Tech Demo / Research</span>
+						<span class="detail-value">Dualsense Tech Demo </span>
 					</div>
 					<div class="detail-item">
-						<span class="detail-label">Team</span>
-						<span class="detail-value">Solo</span>
+						<span class="detail-label">Engine</span>
+						<span class="detail-value">Unreal Engine 5 | C++</span>
 					</div>
 					<div class="detail-item">
-						<span class="detail-label">Platform</span>
-						<span class="detail-value">PS5 / PC</span>
+						<span class="detail-label">Role</span>
+						<span class="detail-value">Technical Design</span>
+						<span class="detail-value">UX Design</span>
 					</div>
 				</div>
 			</div>
@@ -100,10 +99,24 @@
 		<div class="container">
 			<p class="section-label">Behind the Scenes</p>
 			<h2 class="section-title">Design Process</h2>
-			<div class="process-placeholder">
-				<i class="fas fa-pencil-alt"></i>
-				<p>Detailed design notes coming soon &mdash; check back later!</p>
-			</div>
+			<ul class="process-list">
+				<li class="process-item">
+					<h3 class="process-item-title">Why DualSense?</h3>
+					<p>The DualSense is the most underutilised controller in gaming right now, which is remarkable given that it represents the first generational leap in controller design since the original DualShock. Astro Bot won Game of the Year not just because it was a great game, but because it used the DualSense's haptic features in ways not many other games had, the controller became part of the experience. I wanted to build a tech demo that showed developers concretely how they could integrate those same features into the production and polish stage of their own games.</p>
+				</li>
+				<li class="process-item">
+					<h3 class="process-item-title">Designing Each Gun's Haptic Profile</h3>
+					<p>To make each weapon feel distinct, I looked at two things: its sound profile and its visual language. A machine gun fires in rapid bursts, ratatata, so the trigger feedback needed to bounce back repeatedly and the controller vibrations should build the longer the trigger is held. For translating that into haptics, I turned to an unexpected reference: comic book onomatopoeia. The way comics describe a pistol shot as BLAM gave me a clear blueprint, heavy, single, explosive. Reading how sound is drawn gave me a design language for how it should feel.</p>
+				</li>
+				<li class="process-item">
+					<h3 class="process-item-title">Haptics as Horror Atmosphere</h3>
+					<p>In the horror level, I made every action produce some kind of feedback, the sharp click of a flashlight turning on, the heavy thud of footsteps on concrete, the muffled softness of footsteps on carpet. These are small differences, but they matter because half of what makes horror work is sound design. By replicating those sound effects in vibration and haptic feedback, the controller becomes part of the game's soundscape. The tension is not just heard and seen, it is felt in your hands.</p>
+				</li>
+				<li class="process-item">
+					<h3 class="process-item-title">Touch as the Missing Sense</h3>
+					<p>Touch is one of five human senses, and games have historically ignored it. Feeling the difference between solid ground and soft carpet makes sneaking feel meaningfully different, your hands know something your character is doing. Firing a heavy revolver with real kickback in the trigger sells the weight of the shot in a way visuals and audio alone cannot. That is the UX argument for haptics: it does not add a new layer on top of the experience, it ties the sound and visuals together into something that feels complete.</p>
+				</li>
+			</ul>
 		</div>
 	</div>
 
