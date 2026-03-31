@@ -48,27 +48,26 @@
 		<div class="container">
 			<div class="product-info-grid">
 				<div class="product-description">
-					<p>A Photo In Time is a game about a travelling photographer journeying to different worlds that have been frozen in time. Tasked with documenting each place and uncovering hidden secrets, the player explores a solarpunk-inspired cityscape called Solaris &mdash; built from basic shapes and bold colours with comic book-style post-processing to make it pop.</p>
+					<p>A Photo In Time is a game about a travelling photographer journeying to different worlds that have been frozen in time. Tasked with documenting each place and uncovering hidden secrets, the player explores a solarpunk-inspired cityscape called Solaris built from basic shapes and bold colours with comic book-style post-processing to make it pop.</p>
 					<p>I developed a full locomotion system for the third person character with omnidirectional inputs that change the character's animation states. The player character was created by 3D scanning my own face, refining it in Blender, and feeding it into the Metahuman plugin to produce a realistic AAA-quality character.</p>
-					<p>A key feature is the in-game photography system I coded from scratch &mdash; the player can take pictures, review them in a photo gallery journal, and use the camera to progress through the world. Polaroid rings were used as a unique traversal mechanic, adding a sense of wonder to exploration.</p>
+					<p>A key feature is the in-game photography system I coded from scratch the player can take pictures, review them in a photo gallery journal, and use the camera to progress through the world.</p>
 				</div>
 				<div class="product-details-card">
 					<h4>Project Details</h4>
-					<div class="detail-item">
-						<span class="detail-label">Engine</span>
-						<span class="detail-value">Unreal Engine 5</span>
-					</div>
+					
 					<div class="detail-item">
 						<span class="detail-label">Type</span>
 						<span class="detail-value">Exploration / Photography</span>
 					</div>
 					<div class="detail-item">
-						<span class="detail-label">Team</span>
-						<span class="detail-value">Solo</span>
+						<span class="detail-label">Engine</span>
+						<span class="detail-value">Unreal Engine 5</span>
 					</div>
 					<div class="detail-item">
-						<span class="detail-label">World</span>
-						<span class="detail-value">Solaris (Solarpunk City)</span>
+						<span class="detail-label">Role</span>
+						<span class="detail-value">Game Design</span>
+						<span class="detail-value">Narrative Design</span>
+						<span class="detail-value">Level Design</span>
 					</div>
 				</div>
 			</div>
@@ -86,13 +85,13 @@
 				<a href="img/Portfolio/Solaris/solaris.png" data-fancybox="gallery" data-caption="Solaris overview — bold colours with comic book post-processing">
 					<img src="img/Portfolio/Solaris/solaris.png" alt="Solaris overview">
 				</a>
-				<a href="img/Portfolio/Solaris/gameplayview.png" data-fancybox="gallery" data-caption="Third person gameplay with omnidirectional locomotion system">
+				<a href="img/Portfolio/Solaris/gameplayview.png" data-fancybox="gallery" data-caption="Third person gameplay with omnidirectional locomotion system and 3d scan of my face in metahuman form">
 					<img src="img/Portfolio/Solaris/gameplayview.png" alt="Gameplay view">
 				</a>
-				<a href="img/Portfolio/Solaris/cam ring.png" data-fancybox="gallery" data-caption="Camera ring — photography mechanic in action">
+				<a href="img/Portfolio/Solaris/cam ring.png" data-fancybox="gallery" data-caption="Camera view — photography mechanic in action">
 					<img src="img/Portfolio/Solaris/cam ring.png" alt="Camera ring">
 				</a>
-				<a href="img/Portfolio/Solaris/polar ring.png" data-fancybox="gallery" data-caption="Polaroid ring traversal mechanic">
+				<a href="img/Portfolio/Solaris/polar ring.png" data-fancybox="gallery" data-caption="Polaroid photo mechanic">
 					<img src="img/Portfolio/Solaris/polar ring.png" alt="Polar ring">
 				</a>
 				<a href="img/Portfolio/Solaris/journal.png" data-fancybox="gallery" data-caption="In-game photo journal — review your captured images">
@@ -109,10 +108,28 @@
 		<div class="container">
 			<p class="section-label">Behind the Scenes</p>
 			<h2 class="section-title">Design Process</h2>
-			<div class="process-placeholder">
-				<i class="fas fa-pencil-alt"></i>
-				<p>Detailed design notes coming soon &mdash; check back later!</p>
-			</div>
+			<ul class="process-list">
+				<li class="process-item">
+					<h3 class="process-item-title">Why Photography?</h3>
+					<p>Photography is a genuine hobby of mine. I own an Instax camera and one of my favourite things to do is wander to a random part of the city with a limited roll of film and try to find something worth capturing. That spirit of purposeful exploration with constraints fed directly into the game. </p>
+				</li>
+				<li class="process-item">
+					<h3 class="process-item-title">'Frozen in Time' premise</h3>
+					<p>The "frozen in time" premise was also conceptually fitting: a polaroid or Instax photo is itself a single frozen moment given physical form in the real world. The world of Solaris being still and silent mirrors exactly what photography does it stops time and holds it.</p>
+				</li>
+				<li class="process-item">
+					<h3 class="process-item-title">Designing Solaris as Solarpunk</h3>
+					<p>Solarpunk is my favourite of the punk genres. I love its hopeful, utopian quality, and it creates an interesting tension with the unsettling stillness of a world frozen in time. Practically, I am not a game artist or technical artist, so building Solaris from simple shapes with bold colours and comic book post-processing was a way to make the important landmarks read clearly. If something was worth photographing, it needed to stand out immediately and that visual language made sure it did.</p>
+				</li>
+				<li class="process-item">
+					<h3 class="process-item-title">The Photography Feedback Loop</h3>
+					<p>The camera mechanic was designed to be more than a feature, it is the engine of the game's exploration. Taking photographs fills out the player's journal, and the journal surfaces the main character's personal insights into the world: what he notices, what he is piecing together about why time froze. This creates a deliberate loop: exploration prompts you to take a photo, the photo unlocks a journal entry, the entry points you toward the next area worth exploring. Each part of the loop feeds the next.</p>
+				</li>
+				<li class="process-item">
+					<h3 class="process-item-title">Building the Polaroid Mechanic</h3>
+					<p>This was my first major solo project in Unreal Engine 5, and the technical challenge I am most proud of solving was the polaroid system itself. Capturing a screenshot is straightforward using Unreal's built-in tools — the hard part was making that screenshot become a persistent virtual object that exists in the game world: something the player could view, that would populate the journal gallery, and that felt like a real photograph rather than just a UI element.</p>
+				</li>
+			</ul>
 		</div>
 	</div>
 

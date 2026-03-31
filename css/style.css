@@ -809,6 +809,46 @@ body.product-page #navigation {
   color: var(--accent-orange);
 }
 
+.process-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.process-item {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-left: 3px solid var(--accent-orange);
+  border-radius: 14px;
+  padding: 28px 32px;
+  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.process-item:hover {
+  box-shadow: 0 6px 25px rgba(232, 132, 74, 0.12);
+  border-color: rgba(232, 132, 74, 0.45);
+}
+
+.process-item-title {
+  color: var(--text-primary);
+  font-size: 14px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 0 0 12px 0;
+}
+
+.process-item p {
+  color: var(--text-secondary);
+  line-height: 1.9;
+  font-size: 15px;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
 /* Product CTA */
 .product-cta {
   background: linear-gradient(135deg, #2d1a35, var(--bg-dark));
