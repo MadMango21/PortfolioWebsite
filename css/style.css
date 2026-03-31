@@ -758,6 +758,10 @@ body.product-page #navigation {
   flex-wrap: wrap;
 }
 
+.hero-cta {
+  margin-top: 24px;
+}
+
 .product-tag {
   background-color: rgba(232, 132, 74, 0.2);
   border: 1px solid rgba(232, 132, 74, 0.5);
@@ -964,24 +968,22 @@ body.product-page #navigation {
 
 .cta-btn {
   display: inline-block;
-  padding: 15px 38px;
-  background-color: var(--accent-orange);
-  color: #fff;
+  padding: 14px 35px;
+  background-color: rgba(232, 132, 74, 0.1);
+  color: var(--text-primary);
+  border: 2px solid var(--accent-orange);
   border-radius: 50px;
   text-decoration: none;
-  font-size: 13px;
-  letter-spacing: 3px;
+  font-size: 14px;
+  letter-spacing: 2px;
   text-transform: uppercase;
   transition: all 0.3s;
-  margin: 8px;
 }
 
 .cta-btn:hover {
-  background-color: var(--accent-rose);
+  background-color: var(--accent-orange);
   color: #fff;
   text-decoration: none;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(212, 84, 122, 0.4);
 }
 
 .cta-btn-outline {
