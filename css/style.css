@@ -165,7 +165,7 @@ h5 {
    ABOUT SECTION
    =========================== */
 #about {
-  background-color: var(--bg-dark);
+  background: linear-gradient(135deg, var(--bg-section), #2d1a35);
   color: var(--text-primary);
 }
 
@@ -335,7 +335,7 @@ h5 {
    RESUME SECTION
    =========================== */
 #resume.contactSection {
-  background-color: var(--bg-section);
+  background: var(--bg-dark);
 }
 
 /* ===========================
