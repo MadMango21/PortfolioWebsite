@@ -542,11 +542,38 @@
 		</div>
 	</div>
 	<div id="contact" class="contactSection section">
-		<div class="col-md-12 text-center">
-			<p class="subHeading">Like what you see?</p>
-			<h2>I'd love to hear from you!</h2>
-			<a href="mailto:mhumzam21@gmail.com" class="contactButton">GET IN TOUCH!</a>
-			<div class="social-links">
+		<div class="container">
+			<div class="col-md-12 text-center" style="margin-bottom: 40px;">
+				<p class="subHeading">Interested in working together?</p>
+				<h2>I'd love to hear from you!</h2>
+			</div>
+			<div class="contact-form-wrap">
+				<div class="form-success" data-fs-success>Your message has been sent. I'll be in touch soon!</div>
+				<div class="form-error" data-fs-error></div>
+				<form id="contact-form" class="contact-form">
+					<div class="form-row">
+						<div class="form-group">
+							<label for="contact-name">Name</label>
+							<input type="text" id="contact-name" name="name" placeholder="Your name" data-fs-field required>
+							<span class="field-error" data-fs-error="name"></span>
+						</div>
+						<div class="form-group">
+							<label for="contact-email">Email</label>
+							<input type="email" id="contact-email" name="email" placeholder="your@email.com" data-fs-field required>
+							<span class="field-error" data-fs-error="email"></span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="contact-message">Message</label>
+						<textarea id="contact-message" name="message" rows="5" placeholder="Tell me about your project or opportunity..." data-fs-field required></textarea>
+						<span class="field-error" data-fs-error="message"></span>
+					</div>
+					<div class="text-center">
+						<button type="submit" class="contactButton" data-fs-submit-btn>SEND MESSAGE</button>
+					</div>
+				</form>
+			</div>
+			<div class="social-links" style="margin-top: 40px;">
 				<a href="https://www.linkedin.com/in/humza-m-0b108522a" class="social-link" target="_blank" aria-label="LinkedIn">
 					<i class="fab fa-linkedin"></i>
 				</a>
@@ -565,6 +592,11 @@
 		</div>
 	</div>
 
+	<script>
+		window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+		formspree('initForm', { formElement: '#contact-form', formId: 'xaqlbjyy' });
+	</script>
+	<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 	<script src="js/countUp.js"></script>
 	<script src="js/countUp-jquery.js"></script>
 	<script src="js/typed.min.js"></script>

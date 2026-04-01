@@ -560,6 +560,113 @@ h5 {
 }
 
 /* ===========================
+   CONTACT FORM
+   =========================== */
+.contact-form-wrap {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.contact-form .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.contact-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent-orange);
+}
+
+.contact-form input,
+.contact-form textarea {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 10px;
+  padding: 14px 18px;
+  color: var(--text-primary);
+  font-size: 15px;
+  font-family: inherit;
+  letter-spacing: 0.5px;
+  transition: border-color 0.25s ease;
+  outline: none;
+  width: 100%;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--accent-orange);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: var(--text-secondary);
+  opacity: 0.6;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+
+.contact-form button.contactButton {
+  border: 2px solid var(--accent-orange);
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.contact-form button.contactButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.form-success {
+  display: none;
+  background-color: rgba(100, 200, 120, 0.1);
+  border: 1px solid rgba(100, 200, 120, 0.4);
+  border-radius: 10px;
+  padding: 16px 24px;
+  color: #7dd8a0;
+  text-align: center;
+  margin-bottom: 24px;
+  letter-spacing: 0.5px;
+}
+
+.form-error {
+  display: none;
+  background-color: rgba(212, 84, 122, 0.1);
+  border: 1px solid rgba(212, 84, 122, 0.4);
+  border-radius: 10px;
+  padding: 16px 24px;
+  color: var(--accent-rose);
+  text-align: center;
+  margin-bottom: 24px;
+  letter-spacing: 0.5px;
+}
+
+.field-error {
+  font-size: 12px;
+  color: var(--accent-rose);
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+  .contact-form .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===========================
    SOCIAL LINKS
    =========================== */
 .social-links {
