@@ -1,4 +1,23 @@
 /* ===========================
+   REDUCED MOTION
+   =========================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+  }
+  /* Hide canvas-based effects entirely */
+  #bg-canvas, #cursor-trail { display: none !important; }
+  /* Reveal elements immediately without animation */
+  .reveal { opacity: 1 !important; transform: none !important; }
+  /* Kill progress bar shimmer */
+  #scroll-progress { animation: none !important; }
+}
+
+/* ===========================
    SCROLL PROGRESS BAR
    =========================== */
 
@@ -118,6 +137,14 @@
 /* Hide default cursor everywhere */
 *, *::before, *::after { cursor: none !important; }
 
+/* Restore visible focus ring for keyboard navigation (removed by cursor:none) */
+:focus-visible {
+  outline: 2px solid var(--accent-orange) !important;
+  outline-offset: 3px;
+  border-radius: 4px;
+  box-shadow: 0 0 0 4px rgba(232, 132, 74, 0.2) !important;
+}
+
 #cursor-dot {
   position: fixed;
   width: 8px;
@@ -210,6 +237,17 @@ body {
   color: var(--text-primary);
   background-color: var(--bg-dark);
   letter-spacing: 1px;
+  animation: page-fade-in 0.3s ease forwards;
+}
+
+body.fade-out {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+@keyframes page-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
 #bg-canvas {
@@ -318,8 +356,24 @@ body {
   transition: color 0.2s;
 }
 
-#navigation li a:hover {
+#navigation li a:hover,
+#navigation li a.nav-active {
   color: var(--accent-orange);
+}
+
+#navigation li a.nav-active {
+  position: relative;
+}
+
+#navigation li a.nav-active::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent-orange), var(--accent-rose));
+  border-radius: 2px;
 }
 
 .navbar-brand,
@@ -375,6 +429,10 @@ h5 {
 #about {
   background: linear-gradient(135deg, var(--bg-section), #2d1a35);
   color: var(--text-primary);
+}
+
+#about .row {
+  align-items: center;
 }
 
 .aboutImage {
@@ -957,6 +1015,35 @@ h5 {
 .contactSection h2,
 .contactSection p {
   color: var(--text-primary);
+}
+
+.available-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(126, 203, 143, 0.08);
+  border: 1px solid rgba(126, 203, 143, 0.35);
+  border-radius: 50px;
+  padding: 6px 16px;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #7ecb8f;
+  margin-bottom: 18px;
+}
+
+.available-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #7ecb8f;
+  flex-shrink: 0;
+  animation: dot-pulse 2s ease-in-out infinite;
+}
+
+@keyframes dot-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(126, 203, 143, 0.6); }
+  50%       { box-shadow: 0 0 0 5px rgba(126, 203, 143, 0); }
 }
 
 .subHeading {

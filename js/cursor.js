@@ -1,6 +1,7 @@
 (function () {
-  // Skip on touch devices (no cursor to style)
+  // Skip on touch devices and when user prefers reduced motion
   if (window.matchMedia('(pointer: coarse)').matches) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
   // ── Elements ───────────────────────────────────────────────────────────────
   const dot  = document.createElement('div');

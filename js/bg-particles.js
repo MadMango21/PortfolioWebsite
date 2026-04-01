@@ -1,4 +1,6 @@
 (function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
   const canvas = document.createElement('canvas');
   canvas.id = 'bg-canvas';
   document.body.insertBefore(canvas, document.body.firstChild);
