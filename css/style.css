@@ -1291,13 +1291,14 @@ h5 {
   top: 0;
   bottom: 0;
   width: 90px;
-  pointer-events: none;
+  pointer-events: auto;
   z-index: 1;
   overflow: hidden;
 }
 
 .arabesque-left  { left: 0; }
 .arabesque-right { right: 0; }
+
 
 /* Product pages: content wrapper that anchors the arabesque borders */
 .product-body {
