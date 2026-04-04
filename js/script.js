@@ -21,7 +21,7 @@ $(document).ready(function () {
         play: 8000
     });
 
-    var typed = new Typed(".typed", {
+    new window.Typed(".typed", {
         strings: [ "Game Designer.", "Combat Designer.", "Systems Designer.", "AI Designer.", "Director.", "Photographer.", "Human."],
         typeSpeed: 70,
         loop: true,

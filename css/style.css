@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap');
+
 /* ===========================
    REDUCED MOTION
    =========================== */
@@ -230,14 +232,33 @@
   --text-primary: #f0e4d4;
   --text-secondary: #a89880;
   --border-subtle: rgba(232, 132, 74, 0.2);
+  --font-heading: 'Space Grotesk', system-ui, sans-serif;
+  --font-body:    'DM Sans', system-ui, sans-serif;
 }
 
 body {
-  font-size: 18px;
+  font-family: var(--font-body);
+  font-size: 16px;
   color: var(--text-primary);
   background-color: var(--bg-dark);
-  letter-spacing: 1px;
+  letter-spacing: 0.3px;
+  line-height: 1.6;
   animation: page-fade-in 0.3s ease forwards;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  letter-spacing: 0.5px;
+}
+
+/* UI chrome — labels, tags, nav, buttons */
+.navbar, .nav-link, .subHeading, .section-label,
+.product-tag, .skill-tag, .timeline-tag,
+.resume-card-label, .process-item-title,
+.contactButton, .cta-btn, .back-btn,
+.product-title, .available-badge,
+.doc-body h4, .proficiency-label {
+  font-family: var(--font-heading);
 }
 
 body.fade-out {
@@ -1008,7 +1029,7 @@ h5 {
 }
 
 .proficiency-label.intermediate {
-  color: #7eb8d4;
+  color: var(--accent-rose);
   white-space: nowrap;
 }
 
@@ -1281,6 +1302,111 @@ h5 {
   width: 36px;
   height: 36px;
   font-size: 14px;
+}
+
+/* ===========================
+   DESIGN DOCUMENTS SECTION
+   =========================== */
+.design-docs {
+  background-color: var(--bg-section);
+  padding: 70px 0 30px;
+}
+
+.docs-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.doc-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 calc(33.333% - 14px);
+  text-align: center;
+  gap: 14px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-top: 3px solid var(--accent-orange);
+  border-radius: 14px;
+  padding: 32px 20px 24px;
+  text-decoration: none;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.doc-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-orange);
+  box-shadow: 0 8px 28px rgba(232, 132, 74, 0.15);
+}
+
+.doc-card:nth-child(even) {
+  border-top-color: var(--accent-rose);
+}
+
+.doc-card:nth-child(even) .doc-icon-wrap,
+.doc-card:nth-child(even) .doc-arrow {
+  color: var(--accent-rose);
+}
+
+.doc-card:nth-child(even):hover {
+  border-color: var(--accent-rose);
+  box-shadow: 0 8px 28px rgba(212, 84, 122, 0.15);
+}
+
+.doc-card:nth-child(even):hover .doc-arrow {
+  background: rgba(212, 84, 122, 0.1);
+}
+
+.doc-card:nth-child(even) .doc-arrow {
+  border-color: rgba(212, 84, 122, 0.35);
+}
+
+.doc-icon-wrap {
+  font-size: 36px;
+  color: var(--accent-orange);
+}
+
+.doc-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.doc-body h4 {
+  color: var(--text-primary);
+  font-size: 15px;
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.doc-body p {
+  color: var(--text-secondary);
+  font-size: 12px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.doc-arrow {
+  color: var(--accent-orange);
+  font-size: 13px;
+  opacity: 0.6;
+  border: 1px solid rgba(232, 132, 74, 0.35);
+  border-radius: 50px;
+  padding: 5px 16px;
+  transition: opacity 0.2s ease, background 0.2s ease;
+}
+
+.doc-card:hover .doc-arrow {
+  opacity: 1;
+  background: rgba(232, 132, 74, 0.1);
+}
+
+@media (max-width: 768px) {
+  .doc-card { flex: 0 0 100%; }
 }
 
 /* ===========================
@@ -1651,6 +1777,15 @@ body.product-page #navigation {
 .process-item:hover {
   box-shadow: 0 6px 25px rgba(232, 132, 74, 0.12);
   border-color: rgba(232, 132, 74, 0.45);
+}
+
+.process-item:nth-child(even) {
+  border-left-color: var(--accent-rose);
+}
+
+.process-item:nth-child(even):hover {
+  box-shadow: 0 6px 25px rgba(212, 84, 122, 0.12);
+  border-color: rgba(212, 84, 122, 0.45);
 }
 
 .process-item-title {
