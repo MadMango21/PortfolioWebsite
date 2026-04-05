@@ -882,6 +882,38 @@ h5 {
   border-color: rgba(160, 180, 212, 0.3);
 }
 
+/* Part-time cards — all rose overridden to steel blue */
+.timeline-item.right .timeline-tag.part-time {
+  color: #a0b4d4;
+  background: rgba(160, 180, 212, 0.1);
+  border-color: rgba(160, 180, 212, 0.3);
+}
+
+.timeline-item.right .timeline-card:has(.timeline-tag.part-time) {
+  border-right-color: #a0b4d4;
+  background: rgba(160, 180, 212, 0.04);
+}
+
+.timeline-item.right .timeline-card:has(.timeline-tag.part-time):hover {
+  background: rgba(160, 180, 212, 0.08);
+  border-color: rgba(160, 180, 212, 0.35);
+  border-right-color: #a0b4d4;
+  box-shadow: 0 8px 32px rgba(160, 180, 212, 0.15), 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.timeline-item:has(.timeline-tag.part-time) .timeline-dot {
+  background: #a0b4d4;
+  box-shadow: 0 0 0 3px rgba(160, 180, 212, 0.3);
+}
+
+.timeline-item:has(.timeline-tag.part-time):has(.timeline-card:hover) .timeline-dot {
+  box-shadow: 0 0 0 5px rgba(160, 180, 212, 0.3), 0 0 16px rgba(160, 180, 212, 0.4);
+}
+
+.timeline-item:has(.timeline-tag.part-time) .timeline-role {
+  color: #a0b4d4;
+}
+
 .timeline-date {
   font-size: 11px;
   letter-spacing: 2px;
