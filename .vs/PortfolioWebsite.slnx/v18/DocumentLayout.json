@@ -26,11 +26,11 @@
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+              "Name": "ST:0:0:{d84ee353-0bef-5a41-a649-8f89aca5d84d}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{d84ee353-0bef-5a41-a649-8f89aca5d84d}"
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Document",
@@ -42,8 +42,7 @@
               "RelativeToolTip": "js\\script.js",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-01-01T13:46:01.75Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-01T13:46:01.75Z"
             },
             {
               "$type": "Document",
@@ -55,8 +54,7 @@
               "RelativeToolTip": "css\\style.css",
               "ViewState": "AgIAAEcBAAAAAAAAAAAAAEgBAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-01-01T13:33:38.221Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-01T13:33:38.221Z"
             },
             {
               "$type": "Document",
@@ -66,7 +64,7 @@
               "RelativeDocumentMoniker": "index.html",
               "ToolTip": "U:\\GitHub\\Website\\PortfolioWebsite\\index.html",
               "RelativeToolTip": "index.html",
-              "ViewState": "AgIAAIAAAAAAAAAAAAAQwIIAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAIAAAAAAAAAAAAAQwIIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2026-01-01T13:23:33.569Z",
               "EditorCaption": ""
