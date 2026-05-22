@@ -1,0 +1,4 @@
+<div class="wip-banner">
+						<i class="fas fa-hammer"></i>
+						<span><strong>This project is currently in active development.</strong> Details and screenshots will be updated as work progresses.</span>
+					</div>
